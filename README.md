@@ -1,6 +1,8 @@
 IDFC about the name, its fucking given by [epicguest97](https://github.com/Epicguest97).
 # CHOOT
 
+![CHOOT viewer screenshot](image.png)
+
 This repo is a full reference implementation of CHOOT, an experimental continuous image format based on anisotropic 2D Gaussian splat atoms. There is no pixel grid stored in the file. Decoders evaluate the field at any resolution.
 
 I wrote this in a plain, practical way. It is deterministic and not ML based. It does what it says, no extra stuff.
@@ -149,7 +151,6 @@ Usage:
 The --p3 flag writes ASCII PPM for basic web viewers.
 
 ## Viewer options
-![CHOOT viewer screenshot](image.png)
 
 ### C viewer (Win32 + OpenGL + ImGui)
 Source is in [viewer/viewer.c](viewer/viewer.c). Build with viewer/build.bat after running viewer/setup.ps1 (that script downloads ImGui). This viewer renders in the background and keeps UI responsive.
