@@ -150,15 +150,6 @@ Usage:
 
 The --p3 flag writes ASCII PPM for basic web viewers.
 
-## Viewer options
-
-### C viewer (Win32 + OpenGL + ImGui)
-Source is in [viewer/viewer.c](viewer/viewer.c). Build with viewer/build.bat after running viewer/setup.ps1 (that script downloads ImGui). This viewer renders in the background and keeps UI responsive.
-
-If the C viewer is too heavy or you want the simplest path, use the Python viewer instead.
-
-### Python viewer (simple, portable)
-Use [viewer/choot_viewer.py](viewer/choot_viewer.py). It calls choot_raster.exe to generate PPM, then shows it in a Tkinter window with zoom and pan. This is the easiest viewer if you just want to see the output.
 
 ## Tests
 Run choot_tests.exe. Tests cover:
@@ -167,18 +158,8 @@ Run choot_tests.exe. Tests cover:
 - YCoCg round-trip
 - deterministic rendering
 
-## Why you might see .obj files
-MSVC always compiles .c files into .obj first, then links into .exe. If the link step fails, you are left with .obj files only. That is normal.
 
 ## Known limitations
 - Rendering is CPU-only.
 - Output quality depends on atom count and refinement settings.
 - Very large resolutions can be slow because the renderer is $O(N_{pixels} \times N_{atoms})$.
-
-## File layout overview
-- root build.bat: build core tools
-- viewer/build.bat: build the C viewer
-- viewer/setup.ps1: fetch ImGui
-- tools/: encoder and raster tool
-- src/: core library and renderer
-- tests/: unit tests
