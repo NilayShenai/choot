@@ -150,6 +150,16 @@ Usage:
 
 The --p3 flag writes ASCII PPM for basic web viewers.
 
+## Viewer options
+Prebuilt Windows viewer:
+- https://github.com/NilayShenai/choot/releases/download/CHOOT/choot_viewer.exe
+
+### C viewer (Win32 + OpenGL + ImGui)
+Source is in [viewer/viewer.c](viewer/viewer.c). Build with viewer/build.bat after running viewer/setup.ps1 (that script downloads ImGui). This viewer renders in the background and keeps UI responsive.
+
+### Python viewer (simple, portable)
+Use [viewer/choot_viewer.py](viewer/choot_viewer.py). It calls choot_raster.exe to generate PPM, then shows it in a Tkinter window with zoom and pan. This is the easiest viewer if you just want to see the output.
+
 
 ## Tests
 Run choot_tests.exe. Tests cover:
