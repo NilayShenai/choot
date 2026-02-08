@@ -1,0 +1,58 @@
+# Build outputs (applies to all subfolders)
+**/*.obj
+**/*.exe
+**/*.pdb
+**/*.ilk
+**/*.lib
+**/*.exp
+**/*.dll
+**/*.map
+**/*.o
+**/*.a
+**/*.so
+**/*.dylib
+**/*.out
+
+# Intermediate/build folders
+**/bin/
+**/obj/
+**/build/
+**/dist/
+**/out/
+**/x64/
+**/x86/
+**/Debug/
+**/Release/
+
+# Logs and temp files
+**/*.log
+**/*.tmp
+**/*.bak
+**/*.swp
+**/*.swo
+**/*.tlog
+**/*.idb
+
+# VS Code
+.vscode/
+
+# ImGui download folder (if used)
+viewer/imgui/
+
+# Generated images
+**/*.ppm
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.venv/
+**/venv/
+
+# Generated outputs
+**/output*.choot
